@@ -8,7 +8,7 @@ const Sidebar = () => {
     const {logout,onlineUsers} = useContext(AuthContext)
     const {selectedUser,setSelectedUser,getUsers,users,unseenMessages,setUnseenMessages} = useContext(ChatContext) 
 
-    const[input,setInput] = useState(false)
+    const[input,setInput] = useState('')
 
     const filteredUsers = input ? users.filter((user)=>user.fullName.toLowerCase().includes(input.toLowerCase())) :users
 
